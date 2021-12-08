@@ -1,0 +1,24 @@
+// colors
+$white: #fafafa;
+$black: #313131;
+$grey: #575757;
+$green: #03E69F;
+$light-blue: #039AE2;
+$blue: #0378FF;
+
+// fonts
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin fonts($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

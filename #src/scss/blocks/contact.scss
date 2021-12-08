@@ -1,0 +1,150 @@
+.contact {
+   background: url("../img/background2.jpg") no-repeat center/cover;
+   padding: 85px 0;
+
+   &__wrapper {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 35px 40px 30px;
+      max-width: 480px;
+      min-height: 608px;
+   }
+
+   &__prev {
+      margin-bottom: 45px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &.disable {
+         color: grey;
+
+         .contact__arrow {
+            fill: grey;
+         }
+      }
+   }
+
+   &__arrow {
+      width: 18px;
+      height: 20px;
+      fill: $black;
+      margin-right: 3px;
+      transform: rotate(-180deg);
+   }
+
+   &__body {
+      width: 100%;
+      overflow: hidden;
+   }
+
+   &__progress-bar {
+      font-size: 16px;
+      line-height: 90%;
+      margin-bottom: 15px;
+   }
+
+   &__progres-number {
+      position: relative;
+      margin-right: 80px;
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: 60px;
+         height: 1px;
+         background: $black;
+         left: 18px;
+         top: 50%;
+         transform: translate(0, -50%);
+      }
+   }
+}
+
+.form {
+   &__body {
+      display: flex;
+   
+   }
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+   }
+
+   &__content {
+      min-height: 330px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      &.no-title {
+         justify-content: flex-end;
+      }
+   }
+
+   &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      color: #313131;
+   }
+
+   &__radio-btn {
+      cursor: pointer;
+
+      &:not(:last-child) {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__radio-text {
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 125%;
+      color: #313131;
+      text-transform: uppercase;
+   }
+
+   &__input {
+      width: 100%;
+      height: 55px;
+      padding: 20px 25px;
+      color: #313131;
+      font-size: 15px;
+      line-height: 90%;
+      background: #fafafa;
+      border: 1px solid #d0d0d0;
+      box-sizing: border-box;
+      border-radius: 14px;
+
+      &:not(:first-child) {
+         margin-top: 35px;
+      }
+
+      &::placeholder {
+         font-size: 15px;
+         line-height: 90%;
+         color: #999999;
+      }
+   }
+
+   &__button {
+      background: #039ae2;
+      border-radius: 14px;
+      max-width: 400px;
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px auto 0;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+}

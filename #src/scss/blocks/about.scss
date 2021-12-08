@@ -1,0 +1,114 @@
+.about {
+   padding: 200px 0 100px;
+
+   @media screen and (max-width: 992px) {
+      padding: 100px 0 60px;
+   }
+
+   @media screen and (max-width: 576px) {
+      padding: 100px 0 50px;
+   }
+
+   &__body {
+      margin-top: 80px;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 40px;
+      }
+
+      @media screen and (max-width: 576px) {
+         margin-top: 30px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 18px;
+      line-height: 25.2px;
+      max-width: 420px;
+   }
+
+   &__subtitle-brand {
+      color: $grey;
+   }
+
+   &__items-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 80px;
+
+      @media screen and (max-width: 1200px) {
+         justify-content: center;
+      }
+
+      @media screen and (max-width: 992px) {
+         margin-top: 60px;
+      }
+
+      @media screen and (max-width: 576px) {
+         margin-top: 50px;
+      }
+   }
+
+   &__items {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 1055px;
+      width: 100%;
+      flex-wrap: wrap;
+      column-gap: 55px;
+
+      @media screen and (max-width: 1200px) {
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      max-width: 315px;
+      width: 100%;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid $grey;
+      padding: 40px 20px;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 992px) {
+         max-width: 360px;
+         min-height: 252px;
+         margin-bottom: 32px;
+         padding: 32px;
+      }
+
+      @media screen and (max-width: 576px) {
+         max-width: 300px;
+         min-height: 205px;
+         margin-bottom: 15px;
+         padding: 15px 10px;
+      }
+
+      &:nth-child(2n) {
+         border-left: none;
+         border-right: none;
+      }
+   }
+
+   &__image {
+   }
+
+   &__text-wrapper {
+   }
+
+   &__text-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33.6px;
+      color: $light-blue;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 25.2px;
+   }
+}

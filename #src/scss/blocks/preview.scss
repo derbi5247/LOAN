@@ -1,0 +1,106 @@
+.preview {
+   &__wrapper {
+      background: url("../img/background1.jpg") no-repeat center/cover;
+      min-height: 750px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(4, 260px);
+      grid-template-rows: 1fr;
+      gap: 0px 25px;
+      grid-template-areas: ". . . .";
+      padding: 55px 0;
+      justify-content: center;
+
+      @media screen and (max-width: 1200px) {
+         grid-template-columns: repeat(2, 260px);
+         grid-template-rows: repeat(2, 1fr);
+         gap: 25px 25px;
+         grid-template-areas:
+            ". ."
+            ". .";
+      }
+
+      @media screen and (max-width: 576px) {
+         grid-template-columns: 260px;
+         grid-template-rows: repeat(4, 1fr);
+         gap: 20px 0px;
+         grid-template-areas:
+            "."
+            "."
+            "."
+            ".";
+      }
+   }
+
+   &__card {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(12px);
+      border-radius: 8px;
+      padding: 25px;
+      color: $light-blue;
+      max-width: 260px;
+      width: 100%;
+      min-height: 170px;
+      position: relative;
+
+      &_link {
+         background: rgba(3, 154, 226, 0.55);
+      }
+   }
+
+   &__number {
+      border-radius: 50%;
+      border: 1px solid $light-blue;
+      background: transparent;
+      width: 21px;
+      height: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+   }
+
+   &__num {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 10.8px;
+   }
+
+   &__card-text {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27.5px;
+   }
+
+   &__link {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+   }
+
+   &__card-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 27.6px;
+      color: $green;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+   }
+
+   &__button {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid $green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
